@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+	"build": "ng build --prod --extract-css=false",
+	"extract": "node extract.js",
+	"deploy": "npm run build && npm run extract",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
