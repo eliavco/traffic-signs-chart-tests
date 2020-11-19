@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-	"build": "ng build --prod --extract-css=false",
-	"extract": "node extract.js",
-	"deploy": "npm run build && npm run extract",
+    "build": "ng build --prod --extract-css=false",
+    "extract": "node extract.js",
+    "deploy": "npm run build && npm run extract",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -21,6 +21,7 @@
     "@angular/platform-browser": "~10.1.5",
     "@angular/platform-browser-dynamic": "~10.1.5",
     "@angular/router": "~10.1.5",
+    "chart.js": "^2.9.4",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

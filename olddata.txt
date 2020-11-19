@@ -1,0 +1,17 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<base href="/">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	<div><canvas id="main-test-chart"></canvas></div>
+	<script>var appData = '[{"date":1589907279154,"grade":90,"id":6,"time":3652,"user":"שאול השמן"},{"date":1572348927456,"grade":85,"id":4,"time":12,"user":"נחמן ביאליק"},{"date":1557664029612,"grade":20,"id":3,"time":54,"user":"שלומציון המלכה"},{"date":1497813852344,"grade":55,"id":2,"time":73,"user":"רחבעם מתיתיה"},{"date":1280987098279,"grade":90,"id":1,"time":2376,"user":"אליאב שלום כהן"}]'; appData = JSON.parse(appData).map(d => { d.date = new Date(d.date); return d; });</script>
+
+	
+	<script>var chartData = { time: appData.map(test => ({ x: test.date, y: Math.floor(test.time * 2 / (Math.max(...appData.map(d => d.grade)) - Math.min(...appData.map(d => d.grade)))) })), grade: appData.map(test => ({ x: test.date, y: test.grade })) }; new Chart(document.getElementById('main-test-chart').getContext('2d'), { type: 'line', data: { datasets: [{ label: 'ציון', data: chartData.grade, backgroundColor: 'rgba(54, 162, 235, 0.2)', borderColor: 'rgb(54, 162, 235)', borderWidth: 1 }, { label: 'זמן', data: chartData.time, backgroundColor: 'rgba(255, 99, 132, 0.2)', borderColor: 'rgb(255, 99, 132)', borderWidth: 1 }] }, options: { scales: { yAxes: [{ ticks: { beginAtZero: true } }], xAxes: [{ type: 'time', time: { unit: 'day' } }] } } });</script>
+</body>
+
+</html>

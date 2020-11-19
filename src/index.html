@@ -1,17 +1,11 @@
 <html>
 <head>
-  <meta charset="utf-8">
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <app-root></app-root>
-  <script>
-	let appData = '[{"date":1589907279154,"grade":90,"id":6,"time":3652,"user":"שאול השמן"},{"date":1572348927456,"grade":85,"id":4,"time":12,"user":"נחמן ביאליק"},{"date":1557664029612,"grade":20,"id":3,"time":54,"user":"שלומציון המלכה"},{"date":1497813852344,"grade":55,"id":2,"time":73,"user":"רחבעם מתיתיה"},{"date":1280987098279,"grade":90,"id":1,"time":2376,"user":"אליאב שלום כהן"}]';
-	appData = JSON.parse(appData).map(d => {
-			d.date = new Date(d.date);
-			return d;
-	});
-  </script>
+<app-root></app-root>
+<script>let appData = '[{"date":1589907279154,"grade":90,"id":6,"time":3652,"user":"שאול השמן"},{"date":1572348927456,"grade":85,"id":4,"time":12,"user":"נחמן ביאליק"},{"date":1557664029612,"grade":20,"id":3,"time":54,"user":"שלומציון המלכה"},{"date":1497813852344,"grade":55,"id":2,"time":73,"user":"רחבעם מתיתיה"},{"date":1280987098279,"grade":90,"id":1,"time":2376,"user":"אליאב שלום כהן"}]';appData = JSON.parse(appData).map(d => {d.date = new Date(d.date);return d;});</script>
 </body>
 </html>
